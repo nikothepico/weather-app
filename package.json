@@ -1,0 +1,13 @@
+{
+  "name": "simple-weather-open-meteo",
+  "version": "1.0.0",
+  "description": "Minimal static weather site using Open-Meteo",
+  "scripts": {
+    "start": "npx http-server -c-1 -p 8000",
+    "dev": "npx http-server -c-1 -p 8000"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "license": "MIT"
+}

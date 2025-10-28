@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Weather — Open-Meteo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Simple Weather</h1>
+
+    <form id="search-form" class="search">
+      <input id="city-input" type="search" placeholder="Enter city (e.g. London)" aria-label="City name" required />
+      <div class="unit-toggle" role="radiogroup" aria-label="Temperature unit">
+        <button id="unit-c" class="unit active" aria-pressed="true" title="Celsius">°C</button>
+        <button id="unit-f" class="unit" aria-pressed="false" title="Fahrenheit">°F</button>
+      </div>
+      <button id="search-btn" type="submit">Search</button>
+    </form>
+
+    <div id="status" class="status">Enter a city and press Search.</div>
+
+    <section id="weather" class="weather hidden" aria-live="polite">
+      <div class="location" id="loc"></div>
+      <div class="current">
+        <img id="icon" class="current-icon" src="icons/sun.svg" alt="" aria-hidden="true" />
+        <div>
+          <div class="temp" id="temp"></div>
+          <div class="desc" id="desc"></div>
+        </div>
+      </div>
+      <ul class="details">
+        <li id="wind"></li>
+        <li id="time"></li>
+      </ul>
+    </section>
+
+    <section id="forecast" class="forecast hidden" aria-live="polite">
+      <h2 class="forecast-title">3-day forecast</h2>
+      <div id="forecast-cards" class="forecast-cards"></div>
+    </section>
+
+    
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
